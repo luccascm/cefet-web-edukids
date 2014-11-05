@@ -17,7 +17,7 @@
  * jogo.js. Mais especificamente, procure pela função preencheAnimaisNaTela().
  */
 .animal_desconhecido{ display: inline-block;}
-.animal_desconhecido img{ 
+.animal_desconhecido img{
 	width: 200px;
 	height: 200px;
 	padding: 10px;
@@ -46,14 +46,40 @@
  *   - perturbado: animal fica pulsando
  *   - instinto-selvagem: animal dá um salto e cresce, com uma borda vermelha
  */
-.agitado { }
-.agitado img { }
 
-.alimentado { }
+.agitado { border: 2px solid blue; }
+.agitado img {
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	-webkit-transition: all 400ms linear; /* Safari */
+	transition: all 400ms linear;
+}
+
+.alimentado {
+	border: 3px solid green;
+	transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	-webkit-transition: all 800ms linear; /* Safari */
+	transition: all 800ms linear;
+}
 .alimentado img { }
 
-.perturbado { }
+.perturbado { border: 2px solid rgb(255, 113, 26);
+	transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	-webkit-transition: all 500ms linear; /* Safari */
+	transition: all 500ms linear;
+}
 .perturbado img { }
 
-.instinto-selvagem { }
+.instinto-selvagem {
+	border: 3px solid red;
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-webkit-transition: all 500ms linear; /* Safari */
+	transition: all 500ms linear;
+}
 .instinto-selvagem img { }
